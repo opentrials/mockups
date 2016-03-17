@@ -1,0 +1,21 @@
+html,
+.site-footer {
+  background-color: $blue;
+}
+
+body {
+  background-color: $base-background-color;
+}
+
+.site-footer {
+  color: #fff;
+
+  & > div {
+    @include outer-container;
+    padding: $base-spacing;
+
+    .footer-logo img {
+      height: 32px;
+    }
+  }
+}
