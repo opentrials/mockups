@@ -32,6 +32,56 @@
       background-color: $action-color;
     }
   }
+
+  &.upload,
+  &.download,
+  &.follow,
+  &.unfollow,
+  &.flag {
+    padding-left: $base-spacing * 0.75;
+
+    &:before {
+      @include icon-font();
+      font-size: em(22);
+      float: left;
+      margin-right: $small-spacing /2;
+      position: relative;
+      top: - em(2);
+    }
+  }
+
+  &.upload {
+    &:before {
+      content: "\e90a";
+    }
+  }
+
+  &.download {
+    &:before {
+      content: "\e909";
+    }
+  }
+
+  &.follow {
+    &:before {
+      content: "\e90c";
+      margin-right:0.27em;
+    }
+  }
+
+  &.unfollow {
+    &:before {
+      content: "\e90b";
+      margin-right:0.27em;
+    }
+  }
+
+  &.flag {
+    &:before {
+      content: "\e910";
+      margin-right:0.27em;
+    }
+  }
 }
 
 .actions a {

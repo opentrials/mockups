@@ -359,6 +359,85 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+@font-face {
+  font-family: 'opentrials';
+  src: url("../fonts/opentrials/opentrials.eot?uxjbp");
+  src: url("../fonts/opentrials/opentrials.eot?uxjbp#iefix") format("embedded-opentype"), url("../fonts/opentrials/opentrials.ttf?uxjbp") format("truetype"), url("../fonts/opentrials/opentrials.woff?uxjbp") format("woff"), url("../fonts/opentrials/opentrials.svg?uxjbp#opentrials") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'opentrials' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-flag:before {
+  content: "\e910"; }
+
+.icon-more_vert:before {
+  content: "\e90e"; }
+
+.icon-twitter:before {
+  content: "\e900"; }
+
+.icon-mail:before {
+  content: "\e901"; }
+
+.icon-messages:before {
+  content: "\e902"; }
+
+.icon-arrow-circle-o-down:before {
+  content: "\e909"; }
+
+.icon-arrow-circle-o-up:before {
+  content: "\e90a"; }
+
+.icon-eye-slash:before {
+  content: "\e90b"; }
+
+.icon-eye:before {
+  content: "\e90c"; }
+
+.icon-log-out:before {
+  content: "\e90f"; }
+
+.icon-calendar:before {
+  content: "\e90d"; }
+
+.icon-creative-commons-attribution:before {
+  content: "\e600"; }
+
+.icon-creative-commons:before {
+  content: "\e601"; }
+
+.icon-chevron-thin-down:before {
+  content: "\e602"; }
+
+.icon-play:before {
+  content: "\e903"; }
+
+.icon-pill:before {
+  content: "\e905"; }
+
+.icon-man:before {
+  content: "\e906"; }
+
+.icon-man-woman:before {
+  content: "\e907"; }
+
+.icon-woman:before {
+  content: "\e908"; }
+
+.icon-search:before {
+  content: "\e904"; }
+
 button, input[type="button"], input[type="reset"], input[type="submit"],
 .actions a {
   appearance: none;
@@ -390,6 +469,53 @@ button, input[type="button"], input[type="reset"], input[type="submit"],
     button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover,
     .actions a:disabled:hover {
       background-color: #05b0e1; }
+  button.upload, button.download, button.follow, button.unfollow, button.flag, input[type="button"].upload, input[type="button"].download, input[type="button"].follow, input[type="button"].unfollow, input[type="button"].flag, input[type="reset"].upload, input[type="reset"].download, input[type="reset"].follow, input[type="reset"].unfollow, input[type="reset"].flag, input[type="submit"].upload, input[type="submit"].download, input[type="submit"].follow, input[type="submit"].unfollow, input[type="submit"].flag,
+  .actions a.upload,
+  .actions a.download,
+  .actions a.follow,
+  .actions a.unfollow,
+  .actions a.flag {
+    padding-left: 1.2em; }
+    button.upload:before, button.download:before, button.follow:before, button.unfollow:before, button.flag:before, input[type="button"].upload:before, input[type="button"].download:before, input[type="button"].follow:before, input[type="button"].unfollow:before, input[type="button"].flag:before, input[type="reset"].upload:before, input[type="reset"].download:before, input[type="reset"].follow:before, input[type="reset"].unfollow:before, input[type="reset"].flag:before, input[type="submit"].upload:before, input[type="submit"].download:before, input[type="submit"].follow:before, input[type="submit"].unfollow:before, input[type="submit"].flag:before,
+    .actions a.upload:before,
+    .actions a.download:before,
+    .actions a.follow:before,
+    .actions a.unfollow:before,
+    .actions a.flag:before {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'opentrials' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 1.375em;
+      float: left;
+      margin-right: 0.4em;
+      position: relative;
+      top: -0.125em; }
+  button.upload:before, input[type="button"].upload:before, input[type="reset"].upload:before, input[type="submit"].upload:before,
+  .actions a.upload:before {
+    content: "\e90a"; }
+  button.download:before, input[type="button"].download:before, input[type="reset"].download:before, input[type="submit"].download:before,
+  .actions a.download:before {
+    content: "\e909"; }
+  button.follow:before, input[type="button"].follow:before, input[type="reset"].follow:before, input[type="submit"].follow:before,
+  .actions a.follow:before {
+    content: "\e90c";
+    margin-right: 0.27em; }
+  button.unfollow:before, input[type="button"].unfollow:before, input[type="reset"].unfollow:before, input[type="submit"].unfollow:before,
+  .actions a.unfollow:before {
+    content: "\e90b";
+    margin-right: 0.27em; }
+  button.flag:before, input[type="button"].flag:before, input[type="reset"].flag:before, input[type="submit"].flag:before,
+  .actions a.flag:before {
+    content: "\e910";
+    margin-right: 0.27em; }
 
 .actions a {
   display: block;
@@ -484,8 +610,15 @@ dl {
 .registry-list,
 .document-list {
   display: inline-block;
-  margin-right: 0.8em;
-  margin-bottom: 0.8em; }
+  margin-right: 0.8em; }
+  .overview-list + .overview-list, .overview-list + .registry-list, .overview-list + .document-list,
+  .registry-list + .overview-list,
+  .registry-list + .registry-list,
+  .registry-list + .document-list,
+  .document-list + .overview-list,
+  .document-list + .registry-list,
+  .document-list + .document-list {
+    margin-top: 0.8em; }
   .overview-list h1,
   .overview-list h2,
   .overview-list h3,
@@ -514,15 +647,178 @@ dl {
     background-color: #f5f5f5;
     padding: 0.6em 0.8em;
     font-size: 0.8125em;
-    margin: 0.625em 0.625em 0 0; }
+    margin: 0.625em 0.625em 0 0;
+    min-height: 2.9em;
+    position: relative; }
     .overview-list li > a,
     .registry-list li > a,
     .document-list li > a {
       color: inherit;
-      font-weight: bold; }
+      font-weight: bold;
+      display: inline-block; }
+  .overview-list .show-actions,
+  .registry-list .show-actions,
+  .document-list .show-actions {
+    display: inline-block;
+    width: 1em;
+    white-space: nowrap;
+    height: 1em;
+    position: relative;
+    cursor: pointer;
+    opacity: 0.8; }
+    .overview-list .show-actions span,
+    .registry-list .show-actions span,
+    .document-list .show-actions span {
+      overflow: hidden;
+      text-indent: 101%;
+      white-space: nowrap;
+      width: 0;
+      display: block;
+      position: absolute; }
+    .overview-list .show-actions:hover,
+    .registry-list .show-actions:hover,
+    .document-list .show-actions:hover {
+      opacity: 1; }
+    .overview-list .show-actions:before,
+    .registry-list .show-actions:before,
+    .document-list .show-actions:before {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'opentrials' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\e90e";
+      font-size: 1.5em;
+      position: absolute;
+      text-indent: 0;
+      left: 0; }
+  .overview-list .actions,
+  .registry-list .actions,
+  .document-list .actions {
+    background-color: #3c3c3b;
+    padding: 0.2em 0;
+    font-size: 1.1em;
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    z-index: 1;
+    min-width: 7em;
+    margin-left: -0.9375em;
+    margin-bottom: -0.9375em;
+    display: none; }
+    .overview-list .actions.active,
+    .registry-list .actions.active,
+    .document-list .actions.active {
+      display: block; }
+    .overview-list .actions li,
+    .registry-list .actions li,
+    .document-list .actions li {
+      float: none;
+      background-color: inherit;
+      padding: 0;
+      margin: 0;
+      min-height: 0;
+      border-bottom: solid 1px rgba(255, 255, 255, 0.1); }
+      .overview-list .actions li:last-child,
+      .registry-list .actions li:last-child,
+      .document-list .actions li:last-child {
+        border: none; }
+      .overview-list .actions li a,
+      .registry-list .actions li a,
+      .document-list .actions li a {
+        display: block;
+        background-color: inherit;
+        color: #fff;
+        margin: 0;
+        font-weight: normal; }
+
+.overview-list * {
+  position: relative; }
+  .overview-list *:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'opentrials' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    left: 0; }
+  .overview-list *.drug {
+    padding-left: 1.8125em; }
+    .overview-list *.drug:before {
+      content: "\e905";
+      font-size: 1.75em; }
+  .overview-list *.date {
+    padding-left: 1.75em; }
+    .overview-list *.date:before {
+      content: "\e90d";
+      font-size: 1.3125em;
+      top: 0.125em; }
+  .overview-list *.men {
+    padding-left: 1.625em; }
+    .overview-list *.men:before {
+      content: "\e906";
+      font-size: 1.375em;
+      top: 0.0625em; }
+  .overview-list *.women {
+    padding-left: 1.625em; }
+    .overview-list *.women:before {
+      content: "\e908";
+      font-size: 1.375em;
+      top: 0.0625em; }
+  .overview-list *.men-and-women {
+    padding-left: 1.75em; }
+    .overview-list *.men-and-women:before {
+      content: "\e907";
+      font-size: 1.375em;
+      top: 0.0625em; }
+.overview-list .number {
+  background-color: #3c3c3b;
+  color: #fff;
+  border-radius: 0.8em;
+  font-size: 0.9em;
+  padding: 0.0625em 0.5em; }
 
 .document-list li {
   background-color: rgba(16, 202, 131, 0.11); }
+  .document-list li.needed {
+    background-color: rgba(227, 67, 18, 0.11);
+    color: #e34312;
+    padding-right: 3.7em; }
+    .document-list li.needed:after {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'opentrials' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\e90a";
+      border-left: solid 1px #fff;
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      font-size: 1.3em;
+      width: 2.23077em;
+      text-align: center;
+      padding-top: 0.65em; }
 
 table {
   border-collapse: collapse;
@@ -757,6 +1053,25 @@ picture {
       overflow: hidden;
       color: #fff;
       float: right; }
+      .site-header > div nav .search:before {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'opentrials' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e904";
+        font-size: 22px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding-top: 4px; }
 
 .banner {
   background-color: #05b0e1;
@@ -799,6 +1114,8 @@ picture {
     background-color: rgba(255, 255, 255, 0.95);
     color: #05b0e1;
     font-size: 0.875em; }
+    .banner .overview-list li .number {
+      background-color: #05b0e1; }
 
 .stars {
   padding-bottom: 1.7em;
@@ -843,6 +1160,8 @@ body {
 
 .site-footer {
   color: #fff; }
+  .site-footer a {
+    color: inherit; }
   .site-footer > div {
     max-width: 1200px;
     margin-left: auto;
@@ -852,7 +1171,39 @@ body {
       clear: both;
       content: "";
       display: table; }
-    .site-footer > div .footer-logo img {
-      height: 32px; }
+    .site-footer > div .footer-logo {
+      opacity: 0.9; }
+      .site-footer > div .footer-logo img {
+        height: 32px; }
+    .site-footer > div hr {
+      margin: 1em 0;
+      opacity: 0.5; }
+    .site-footer > div .cc:before,
+    .site-footer > div .cc-by:before {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'opentrials' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 20px;
+      float: left;
+      margin-right: 5px; }
+    .site-footer > div .cc {
+      font-size: 12px;
+      display: inline-block;
+      line-height: 18px;
+      opacity: 0.8; }
+      .site-footer > div .cc:before {
+        content: "\e601"; }
+    .site-footer > div .cc-by:before {
+      content: "\e600"; }
+    .site-footer > div a:link:hover {
+      opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */

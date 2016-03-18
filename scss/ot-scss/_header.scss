@@ -121,6 +121,17 @@
         overflow: hidden;
         color: #fff;
         float: right;
+
+        &:before {
+          @include icon-font();
+          content: "\e904";
+          font-size: 22px;
+          display: block;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          padding-top: 4px;
+        }
       }
     }
   }

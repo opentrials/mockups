@@ -50,6 +50,10 @@
       background-color: rgba(#fff, 0.95);
       color: $blue;
       font-size: em(14);
+
+      .number {
+        background-color: $blue;
+      }
     }
   }
 }
