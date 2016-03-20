@@ -69,6 +69,19 @@
       }
     }
 
+    .show-menu {
+      margin-top: 19px;
+      margin-right: -10px;
+
+      @include MQ(M) {
+        margin-top: 22px;
+      }
+
+      @include MQ(L) {
+        display: none;
+      }
+    }
+
     nav {
       display: none;
 
@@ -147,14 +160,6 @@
                   padding: $small-spacing $small-spacing * 1.5;
                   font-size: 1.05em;
                   min-width: 175px;
-
-                  .number {
-                    background-color: $blue;
-                    color: #fff;
-                    float: right;
-                    padding: 0 7px;
-                    border-radius: 10px;
-                  }
                 }
 
                 &.logout {
@@ -215,5 +220,47 @@
         }
       }
     }
+  }
+}
+
+.show-menu {
+  display: block;
+  width: 40px;
+  padding: 5px 10px;
+  float: right;
+
+  span {
+    background: $base-font-color;
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    position: relative;
+    border-radius: $base-border-radius;
+    @include transition(transform 0.2s ease-in-out 0s);
+  }
+}
+
+html.mm-opened .show-menu {
+  span.top-bar {
+    @include transform(rotate(45deg));
+    top: 8px;
+  }
+  span.middle-bar {
+    opacity: 0;
+  }
+  span.bottom-bar {
+    @include transform(rotate(-45deg));
+    top: -8px;
+  }
+}
+
+.user-nav,
+#menu {
+  .number {
+    background-color: $blue;
+    color: #fff;
+    float: right;
+    padding: 0 7px;
+    border-radius: 10px;
   }
 }

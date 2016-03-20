@@ -92,14 +92,19 @@ dl {
     padding: 0.2em 0;
     font-size: 1.1em;
     position: absolute;
-    bottom:100%;
-    left: 100%;
     z-index: 1;
     min-width: 7em;
     margin-left: - em(15);
     margin-bottom: - em(15);
     display: none;
     border-radius: $base-border-radius;
+    bottom:100%;
+    right: 0;
+
+    @include MQ(M) {
+      right: auto;
+      left: 100%;
+    }
 
     &.active {
       display: block;
