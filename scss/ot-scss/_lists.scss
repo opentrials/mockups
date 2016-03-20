@@ -99,6 +99,7 @@ dl {
     margin-left: - em(15);
     margin-bottom: - em(15);
     display: none;
+    border-radius: $base-border-radius;
 
     &.active {
       display: block;

@@ -95,6 +95,87 @@
 
           li {
             font-size: 13px;
+            position: relative;
+
+            img {
+              height: 22px;
+              border-radius: 50%;
+              float: left;
+              position: relative;
+              top: -0.1em;
+              right: -0.4em;
+            }
+
+            ul {
+              position: absolute;
+              background-color: $dark-gray;
+              color: #fff;
+              text-align: left;
+              border-radius: $base-border-radius;
+              right: 0;
+              margin-top: 10px;
+              display: none;
+
+              &.active {
+                display: block;
+              }
+
+              &:before {
+                display: block;
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent $dark-gray transparent;
+                position: absolute;
+                right: 10%;
+                top: -8px;
+              }
+
+              li {
+                display: block;
+                border-bottom: solid 1px rgba(#fff, 0.3);
+
+                &:last-of-type {
+                  border: none;
+                }
+
+                a {
+                  color: inherit;
+                  display: block;
+                  padding: $small-spacing $small-spacing * 1.5;
+                  font-size: 1.05em;
+                  min-width: 175px;
+
+                  .number {
+                    background-color: $blue;
+                    color: #fff;
+                    float: right;
+                    padding: 0 7px;
+                    border-radius: 10px;
+                  }
+                }
+
+                &.logout {
+                  a {
+                    &:after {
+                      @include icon-font();
+                      content: "\e90f";
+                      position: absolute;
+                      top: 0.8em;
+                      right: 1em;
+                      font-size: 1.2em;
+                      opacity: 0.8;
+                    }
+
+                    &:hover:after {
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
 

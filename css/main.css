@@ -711,7 +711,8 @@ dl {
     min-width: 7em;
     margin-left: -0.9375em;
     margin-bottom: -0.9375em;
-    display: none; }
+    display: none;
+    border-radius: 2px; }
     .overview-list .actions.active,
     .registry-list .actions.active,
     .document-list .actions.active {
@@ -1039,7 +1040,74 @@ picture {
       .site-header > div nav ul.user-nav {
         margin: 10px -0.8em 14px 10px; }
         .site-header > div nav ul.user-nav li {
-          font-size: 13px; }
+          font-size: 13px;
+          position: relative; }
+          .site-header > div nav ul.user-nav li img {
+            height: 22px;
+            border-radius: 50%;
+            float: left;
+            position: relative;
+            top: -0.1em;
+            right: -0.4em; }
+          .site-header > div nav ul.user-nav li ul {
+            position: absolute;
+            background-color: #3c3c3b;
+            color: #fff;
+            text-align: left;
+            border-radius: 2px;
+            right: 0;
+            margin-top: 10px;
+            display: none; }
+            .site-header > div nav ul.user-nav li ul.active {
+              display: block; }
+            .site-header > div nav ul.user-nav li ul:before {
+              display: block;
+              content: '';
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 0 10px 10px 10px;
+              border-color: transparent transparent #3c3c3b transparent;
+              position: absolute;
+              right: 10%;
+              top: -8px; }
+            .site-header > div nav ul.user-nav li ul li {
+              display: block;
+              border-bottom: solid 1px rgba(255, 255, 255, 0.3); }
+              .site-header > div nav ul.user-nav li ul li:last-of-type {
+                border: none; }
+              .site-header > div nav ul.user-nav li ul li a {
+                color: inherit;
+                display: block;
+                padding: 0.8em 1.2em;
+                font-size: 1.05em;
+                min-width: 175px; }
+                .site-header > div nav ul.user-nav li ul li a .number {
+                  background-color: #05b0e1;
+                  color: #fff;
+                  float: right;
+                  padding: 0 7px;
+                  border-radius: 10px; }
+              .site-header > div nav ul.user-nav li ul li.logout a:after {
+                /* use !important to prevent issues with browser extensions that change fonts */
+                font-family: 'opentrials' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                /* Better Font Rendering =========== */
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                content: "\e90f";
+                position: absolute;
+                top: 0.8em;
+                right: 1em;
+                font-size: 1.2em;
+                opacity: 0.8; }
+              .site-header > div nav ul.user-nav li ul li.logout a:hover:after {
+                opacity: 1; }
       .site-header > div nav ul.main-nav {
         margin-right: 40px; }
         .site-header > div nav ul.main-nav li.active a {
