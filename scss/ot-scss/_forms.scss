@@ -82,3 +82,33 @@ select {
   max-width: 100%;
   width: auto;
 }
+
+.select {
+  position: relative;
+
+	select {
+		position: relative;
+		padding: .6em 2em .4em 1em;
+		cursor: pointer;
+		@include appearance(none);
+    width: 100%;
+    border: none;
+    border-radius: $base-border-radius;
+    color: $base-font-color;
+
+		&::-ms-expand {
+	      display: none;
+		}
+	}
+
+	&::after {
+    @include icon-font();
+		content: "\e602";
+		position: absolute;
+		z-index: 1;
+		right: 1em;
+		top: 1em;
+    color: $base-font-color;
+    pointer-events: none;
+	}
+}

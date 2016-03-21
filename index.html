@@ -1,0 +1,190 @@
+<!doctype html>
+<html class="no-js home" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>OpenTrials</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div>
+          <a class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.14 131.79"><path class="a" d="M33.57,0A33.61,33.61,0,0,0,0,33.58L0.1,98.21H0a33.57,33.57,0,1,0,67.14,0V33.57A33.61,33.61,0,0,0,33.57,0ZM59.24,50.16H51.37l0-16.48A17.61,17.61,0,0,0,33.83,16.09H33.37A17.61,17.61,0,0,0,15.78,33.68l0,32.21h43.4V98.21A25.66,25.66,0,0,1,8,100.53l-0.1-67A25.35,25.35,0,0,1,33.37,8.18h0.46A25.35,25.35,0,0,1,59.29,33.57Z"/><circle class="a" cx="33.57" cy="98.08" r="3.92"/><rect class="a" x="31.58" y="100.12" width="3.98" height="7.96"/></svg>
+            <span class="title">
+              OpenTrials
+            </span>
+            <span class="tagline">
+              All the Data, on All the Trials, Linked
+            </span>
+          </a>
+
+          <a class="show-menu" href="#menu">
+            <span class="top-bar"></span>
+            <span class="middle-bar"></span>
+            <span class="bottom-bar"></span>
+          </a>
+
+          <nav>
+            <ul class="user-nav">
+              <li>
+                <a>
+                  <img src="https://secure.gravatar.com/avatar/679cd9ae2110a6b20c3c74ac6a6af97d.jpg?s=44" /> Sam Smith
+                </a>
+                <ul>
+                  <li>
+                    <a><span class="number">1</span> Following </a>
+                  </li>
+                  <li class="logout">
+                    <a>Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <a class="search">
+              Search
+            </a>
+            <ul class="main-nav">
+              <li>
+                <a>
+                  About
+                </a>
+              </li>
+              <li>
+                <a>
+                  Patients
+                </a>
+              </li>
+              <li>
+                <a>
+                  Researchers
+                </a>
+              </li>
+              <li>
+                <a>
+                  Transparency
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="main">
+        <form>
+          <header>
+            <h1>All the data, on all the trials</h1>
+            <p>
+              OpenTrials is a linked database for all the available information, on every trial ever conducted, with rankings for transparency and more. It is built and updated with your help.
+            </p>
+          </header>
+          <fieldset class="search-bar">
+            <input type="search" placeholder="Find a trial" />
+            <button type="submit"><span>Search</span></button>
+          </fieldset>
+          <a class="toggle-advanced">Advanced search</a>
+          <fieldset class="advanced">
+            <div>
+              <label for="filters_condition">Condition:</label>
+              <input autocomplete="off" name="filter[condition]" value="" id="filters_condition" data-lookup="condition" placeholder="Search in trial conditions" type="text">
+            </div>
+            <div>
+              <label for="filters_intervention">Intervention:</label>
+              <input type="text" placeholder="Search in trial interventions" data-lookup="intervention" id="filters_intervention" value="" name="filter[intervention]" autocomplete="off">
+            </div>
+            <div>
+              <label for="filters_sex">Sex:</label>
+              <div class="select">
+                <select id="filters_sex" name="filter[sex]">
+                  <option value="">Any</option>
+                  <option value="none">None</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="both">Both</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="filters_country">Country:</label>
+              <input type="text" placeholder="Search by country" id="filters_country" value="" name="filter[country]">
+            </div>
+            <div>
+              <label for="filters_source">Source:</label>
+              <input type="text" placeholder="Search by source title" id="filters_source" value="" name="filter[source]">
+            </div>
+            <div class="sample-size">
+              <label for="filters_sample_size">Sample size:</label>
+              <div>
+                <input type="text" placeholder="from" id="filters_sample_size" value="" name="filter[sampleSize][min]">
+              </div>
+              <div>
+                <input type="text" placeholder="to" value="" name="filter[sampleSize][max]">
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+      <footer class="site-footer">
+        <div>
+          <a href="https://okfn.org/" class="footer-logo" rel="external">
+              <img alt="Open Knowledge" src="img/ok-logo.png">
+          </a>
+
+          <hr />
+
+          <a class="cc" href="http://creativecommons.org/licenses/by/4.0/" rel="external">
+              <span class="cc-by">CC BY</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <nav id="menu">
+      <ul>
+        <li>
+          <a>
+            About
+          </a>
+        </li>
+        <li>
+          <a>
+            Patients
+          </a>
+        </li>
+        <li>
+          <a>
+            Researchers
+          </a>
+        </li>
+        <li>
+          <a>
+            Transparency
+          </a>
+        </li>
+        <li class="mm-divider">Sam Smith</li>
+        <li>
+          <a>
+            <span class="number">1</span> Following
+          </a>
+        </li>
+        <li>
+          <a>Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
