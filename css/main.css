@@ -1798,62 +1798,67 @@ html.mm-opening .mm-menu.mm-front, html.mm-opening .mm-menu.mm-next {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
-.home body {
-  background-color: #05b0e1;
-  color: #fff; }
-  .home body a {
+.home {
+  background-color: #05b0e1; }
+  .home body {
+    color: #fff;
+    background-color: #05b0e1; }
+    @media only screen and (min-width: 900px) {
+      .home body {
+        background-color: transparent; } }
+  .home a {
     color: inherit; }
-  .home body .site-header {
+  .home .site-header {
     background-color: #fff; }
   @media only screen and (min-width: 900px) {
-    .home body {
+    .home {
       background-image: url("../img/banner.jpg");
       background-position: right top;
       background-repeat: no-repeat; }
-      .home body .site-header {
+      .home .site-header {
         background-color: transparent;
         color: #fff; }
-        .home body .site-header > div .logo {
+        .home .site-header > div .logo {
           color: inherit; }
-          .home body .site-header > div .logo svg {
+          .home .site-header > div .logo svg {
             fill: currentColor; }
-          .home body .site-header > div .logo .tagline {
+          .home .site-header > div .logo .tagline {
             color: inherit; }
-        .home body .site-header > div a {
+        .home .site-header > div a {
           color: inherit; }
-          .home body .site-header > div a.search {
+          .home .site-header > div a.search {
             background-color: #fff;
             color: #05b0e1; }
-      .home body .site-footer {
+      .home .site-footer {
         background-color: transparent; } }
-  .home body .main {
+  .home .main {
     text-align: center; }
     @media only screen and (min-width: 600px) {
-      .home body .main header {
+      .home .main header {
         padding-top: 1.6em;
         padding-bottom: 1.6em; } }
-    .home body .main header h1 {
+    .home .main header h1 {
       font-weight: normal;
       border: none;
       padding: 0;
       margin-bottom: 0.4em; }
     @media only screen and (min-width: 900px) {
-      .home body .main header p {
+      .home .main header p {
         font-size: 1.375em; } }
-    .home body .main form input {
+    .home .main form input {
       color: #3c3c3b; }
-    .home body .main form .search-bar {
+    .home .main form .search-bar {
       position: relative; }
-      .home body .main form .search-bar input[type="search"] {
+      .home .main form .search-bar input[type="search"] {
         padding: 1em 3.5em 1em 1.5em; }
         @media only screen and (min-width: 600px) {
-          .home body .main form .search-bar input[type="search"] {
+          .home .main form .search-bar input[type="search"] {
             font-size: 1.125em;
             border-radius: 5px; } }
         @media only screen and (min-width: 900px) {
-          .home body .main form .search-bar input[type="search"] {
+          .home .main form .search-bar input[type="search"] {
             font-size: 1.375em; } }
-        .home body .main form .search-bar input[type="search"] + button {
+        .home .main form .search-bar input[type="search"] + button {
           position: absolute;
           top: 50%;
           right: 1em;
@@ -1862,12 +1867,12 @@ html.mm-opening .mm-menu.mm-front, html.mm-opening .mm-menu.mm-next {
           margin-top: -2em;
           background-color: transparent;
           color: #3c3c3b; }
-          .home body .main form .search-bar input[type="search"] + button span {
+          .home .main form .search-bar input[type="search"] + button span {
             overflow: hidden;
             text-indent: 101%;
             white-space: nowrap;
             display: block; }
-          .home body .main form .search-bar input[type="search"] + button:before {
+          .home .main form .search-bar input[type="search"] + button:before {
             /* use !important to prevent issues with browser extensions that change fonts */
             font-family: 'opentrials' !important;
             speak: none;
@@ -1885,12 +1890,13 @@ html.mm-opening .mm-menu.mm-front, html.mm-opening .mm-menu.mm-next {
             left: 0;
             right: 0;
             top: 0; }
-    .home body .main form .toggle-advanced {
-      display: inline-block; }
+    .home .main form .toggle-advanced {
+      display: inline-block;
+      cursor: pointer; }
       @media only screen and (min-width: 600px) {
-        .home body .main form .toggle-advanced {
+        .home .main form .toggle-advanced {
           font-size: 1.125em; } }
-      .home body .main form .toggle-advanced:after {
+      .home .main form .toggle-advanced:after {
         /* use !important to prevent issues with browser extensions that change fonts */
         font-family: 'opentrials' !important;
         speak: none;
@@ -1906,47 +1912,83 @@ html.mm-opening .mm-menu.mm-front, html.mm-opening .mm-menu.mm-next {
         display: block;
         font-size: 1.5em; }
     @media only screen and (min-width: 600px) {
-      .home body .main form .advanced > div {
+      .home .main form .advanced > div {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 31.76157%; }
-        .home body .main form .advanced > div:last-child {
+        .home .main form .advanced > div:last-child {
           margin-right: 0; }
-        .home body .main form .advanced > div:nth-child(3n) {
+        .home .main form .advanced > div:nth-child(3n) {
           margin-right: 0; }
-        .home body .main form .advanced > div:nth-child(3n+1) {
+        .home .main form .advanced > div:nth-child(3n+1) {
           clear: left; } }
-    .home body .main form .advanced > div label {
+    .home .main form .advanced > div label {
       text-align: left;
       font-weight: normal; }
     @media only screen and (min-width: 600px) {
-      .home body .main form .advanced > div.sample-size > div {
+      .home .main form .advanced > div.sample-size > div {
         float: left;
         display: block;
         margin-right: 7.42297%;
         width: 46.28851%; }
-        .home body .main form .advanced > div.sample-size > div:last-child {
+        .home .main form .advanced > div.sample-size > div:last-child {
           margin-right: 0; } }
-@media only screen and (min-height: 768px) {
-  .home {
-    height: 100%; }
-    .home body {
+    .home .main form .advanced button {
+      background-color: #fff;
+      color: #05b0e1;
+      display: block;
+      margin-top: 1.6em;
+      clear: both;
+      width: 100%;
+      padding: 1em 3.5em; }
+      @media only screen and (min-width: 600px) {
+        .home .main form .advanced button {
+          display: inline-block;
+          width: auto; } }
+  @media only screen and (min-width: 600px) and (min-height: 768px) {
+    .home:not(.advanced-search) {
       height: 100%; }
-      .home body .page {
+      .home:not(.advanced-search) body {
         height: 100%; }
-      .home body .main {
-        height: 100%;
-        display: table;
-        top: -100px;
-        position: relative;
-        z-index: -1; }
-        .home body .main form {
-          display: table-cell;
-          vertical-align: middle; }
-      .home body .site-footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%; } }
+        .home:not(.advanced-search) body .page {
+          height: 100%; }
+        .home:not(.advanced-search) body .main {
+          height: 100%;
+          display: table;
+          top: -100px;
+          position: relative;
+          z-index: -1;
+          padding: 0.8em; }
+          .home:not(.advanced-search) body .main form {
+            display: table-cell;
+            vertical-align: middle; }
+        .home:not(.advanced-search) body .site-footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%; } }
+  @media only screen and (min-width: 600px) and (min-height: 900px) {
+    .home {
+      height: 100%; }
+      .home body {
+        height: 100%; }
+        .home body .page {
+          height: 100%; }
+        .home body .main {
+          height: 100%;
+          display: table;
+          top: -100px;
+          position: relative;
+          z-index: -1;
+          padding: 0.8em; }
+          .home body .main form {
+            display: table-cell;
+            vertical-align: middle; }
+        .home body .site-footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%; } }
+  .home.js .advanced {
+    display: none; }
 
 /*# sourceMappingURL=main.css.map */
