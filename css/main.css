@@ -490,8 +490,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"],
   text-decoration: none;
   transition: background-color 150ms ease;
   user-select: none;
-  vertical-align: middle;
-  white-space: nowrap; }
+  vertical-align: middle; }
   button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
   .actions a:hover,
   .actions a:focus {
