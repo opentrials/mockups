@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -396,8 +397,8 @@ html {
 
 @font-face {
   font-family: 'opentrials';
-  src: url("../fonts/opentrials/opentrials.eot?uxjbp");
-  src: url("../fonts/opentrials/opentrials.eot?uxjbp#iefix") format("embedded-opentype"), url("../fonts/opentrials/opentrials.ttf?uxjbp") format("truetype"), url("../fonts/opentrials/opentrials.woff?uxjbp") format("woff"), url("../fonts/opentrials/opentrials.svg?uxjbp#opentrials") format("svg");
+  src: url("../fonts/opentrials/opentrials.eot?xloqec");
+  src: url("../fonts/opentrials/opentrials.eot?xloqec#iefix") format("embedded-opentype"), url("../fonts/opentrials/opentrials.ttf?xloqec") format("truetype"), url("../fonts/opentrials/opentrials.woff?xloqec") format("woff"), url("../fonts/opentrials/opentrials.svg?xloqec#opentrials") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -415,6 +416,15 @@ html {
 
 .icon-flag:before {
   content: "\e910"; }
+
+.icon-close:before {
+  content: "\e911"; }
+
+.icon-insert_drive_file:before {
+  content: "\e912"; }
+
+.icon-delete:before {
+  content: "\e913"; }
 
 .icon-more_vert:before {
   content: "\e90e"; }
@@ -1305,6 +1315,55 @@ html.mm-opened .show-menu span.bottom-bar {
     height: 0;
     display: block; }
 
+.progress-bar {
+  background-color: #f2f2f2;
+  border: none;
+  height: 6px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden; }
+  .progress-bar > span.meter {
+    -webkit-animation: progress 0.7s linear infinite;
+    -moz-animation: progress 0.7s linear infinite;
+    animation: progress 0.7s linear infinite;
+    background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%);
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%);
+    background-color: #05b0e1;
+    background-repeat: repeat-x;
+    background-size: 40px 40px;
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    width: 60%; }
+    .progress-bar > span.meter.done {
+      background-image: none; }
+
+@-webkit-keyframes progress {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: 40px 0px; } }
+@-moz-keyframes progress {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: 40px 0px; } }
+@-ms-keyframes progress {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: 40px 0px; } }
+@-o-keyframes progress {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: 40px 0px; } }
+@keyframes progress {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: 40px 0px; } }
 html,
 .site-footer {
   background-color: #05b0e1; }
@@ -1796,6 +1855,116 @@ html.mm-front .mm-menu {
 html.mm-opening .mm-menu.mm-front, html.mm-opening .mm-menu.mm-next {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
+
+.themodal-lock {
+  /* when modal is opened we're removing scrollbars from the main content */
+  overflow: hidden; }
+
+.themodal-overlay {
+  /* overlay will stay fixed and will take all the space available */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  /* if modal content doesn't fit inside the overlay, display scrollbars */
+  overflow: auto;
+  /* allow one-finger iPad scrolling */
+  -webkit-overflow-scrolling: touch; }
+
+/* fix for iPad glitches */
+.themodal-overlay > * {
+  -webkit-transform: translateZ(0px); }
+
+.themodal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  /* IE6–IE8 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = #7F000000, endColorstr = #7F000000);
+  zoom: 1; }
+
+.themodal-overlay {
+  padding-left: 15px;
+  background-color: rgba(5, 176, 225, 0.96); }
+
+.modal {
+  background-color: #fff;
+  padding: 1.6em;
+  position: relative; }
+  .modal .close {
+    position: absolute;
+    top: 0.8em;
+    right: 0.8em; }
+  .modal h1:first-of-type, .modal h2:first-of-type, .modal h3:first-of-type, .modal h4:first-of-type, .modal h5:first-of-type, .modal h6:first-of-type {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    padding: 0;
+    border: none;
+    font-size: 1.25em; }
+  @media only screen and (min-width: 900px) {
+    .modal#upload {
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px; } }
+  .modal#upload p {
+    font-size: 0.875em; }
+  .modal#upload button {
+    display: block;
+    width: 100%; }
+  .modal#upload .file {
+    margin-top: 1.6em; }
+    .modal#upload .file .remove {
+      float: right;
+      color: #d0d0d0;
+      cursor: pointer; }
+      .modal#upload .file .remove span {
+        overflow: hidden;
+        text-indent: 101%;
+        white-space: nowrap;
+        display: block;
+        width: 0;
+        height: 0; }
+      .modal#upload .file .remove:before {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'opentrials' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e913";
+        font-size: 1.3em; }
+      .modal#upload .file .remove:hover {
+        color: #3c3c3b; }
+    .modal#upload .file .file-name {
+      font-size: 0.875em;
+      font-weight: normal;
+      line-height: 1.5em; }
+      .modal#upload .file .file-name:before {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'opentrials' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e912";
+        font-size: 1.5em;
+        float: left; }
+    .modal#upload .file .progress-bar {
+      margin-top: 0.8em;
+      margin-bottom: 0.8em; }
+    .modal#upload .file textarea {
+      font-size: 0.8125em; }
 
 .home {
   background-color: #05b0e1; }

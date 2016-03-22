@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'opentrials';
-    src:    url('#{$path-to-fonts}/opentrials/opentrials.eot?uxjbp');
-    src:    url('#{$path-to-fonts}/opentrials/opentrials.eot?uxjbp#iefix') format('embedded-opentype'),
-        url('#{$path-to-fonts}/opentrials/opentrials.ttf?uxjbp') format('truetype'),
-        url('#{$path-to-fonts}/opentrials/opentrials.woff?uxjbp') format('woff'),
-        url('#{$path-to-fonts}/opentrials/opentrials.svg?uxjbp#opentrials') format('svg');
+    src:    url('#{$path-to-fonts}/opentrials/opentrials.eot?xloqec');
+    src:    url('#{$path-to-fonts}/opentrials/opentrials.eot?xloqec#iefix') format('embedded-opentype'),
+        url('#{$path-to-fonts}/opentrials/opentrials.ttf?xloqec') format('truetype'),
+        url('#{$path-to-fonts}/opentrials/opentrials.woff?xloqec') format('woff'),
+        url('#{$path-to-fonts}/opentrials/opentrials.svg?xloqec#opentrials') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -30,6 +30,15 @@
 
 .icon-flag:before {
     content: "\e910";
+}
+.icon-close:before {
+    content: "\e911";
+}
+.icon-insert_drive_file:before {
+    content: "\e912";
+}
+.icon-delete:before {
+    content: "\e913";
 }
 .icon-more_vert:before {
     content: "\e90e";
