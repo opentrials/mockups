@@ -397,8 +397,8 @@ html {
 
 @font-face {
   font-family: 'opentrials';
-  src: url("../fonts/opentrials/opentrials.eot?xloqec");
-  src: url("../fonts/opentrials/opentrials.eot?xloqec#iefix") format("embedded-opentype"), url("../fonts/opentrials/opentrials.ttf?xloqec") format("truetype"), url("../fonts/opentrials/opentrials.woff?xloqec") format("woff"), url("../fonts/opentrials/opentrials.svg?xloqec#opentrials") format("svg");
+  src: url("../fonts/opentrials/opentrials.eot?9zegjl");
+  src: url("../fonts/opentrials/opentrials.eot?9zegjl#iefix") format("embedded-opentype"), url("../fonts/opentrials/opentrials.ttf?9zegjl") format("truetype"), url("../fonts/opentrials/opentrials.woff?9zegjl") format("woff"), url("../fonts/opentrials/opentrials.svg?9zegjl#opentrials") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -413,6 +413,24 @@ html {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-behavioral:before {
+  content: "\e914"; }
+
+.icon-procedure:before {
+  content: "\e915"; }
+
+.icon-pill:before {
+  content: "\e905"; }
+
+.icon-man:before {
+  content: "\e906"; }
+
+.icon-man-woman:before {
+  content: "\e907"; }
+
+.icon-woman:before {
+  content: "\e908"; }
 
 .icon-flag:before {
   content: "\e910"; }
@@ -450,6 +468,18 @@ html {
 .icon-eye:before {
   content: "\e90c"; }
 
+.icon-more_vert:before {
+  content: "\e90e"; }
+
+.icon-twitter:before {
+  content: "\e900"; }
+
+.icon-mail:before {
+  content: "\e901"; }
+
+.icon-messages:before {
+  content: "\e902"; }
+
 .icon-log-out:before {
   content: "\e90f"; }
 
@@ -467,18 +497,6 @@ html {
 
 .icon-play:before {
   content: "\e903"; }
-
-.icon-pill:before {
-  content: "\e905"; }
-
-.icon-man:before {
-  content: "\e906"; }
-
-.icon-man-woman:before {
-  content: "\e907"; }
-
-.icon-woman:before {
-  content: "\e908"; }
 
 .icon-search:before {
   content: "\e904"; }
@@ -826,9 +844,11 @@ dl {
         margin: 0;
         font-weight: normal; }
 
-.overview-list * {
+.overview-list *,
+.result .meta * {
   position: relative; }
-  .overview-list *:before {
+  .overview-list *:before,
+  .result .meta *:before {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'opentrials' !important;
     speak: none;
@@ -842,36 +862,61 @@ dl {
     -moz-osx-font-smoothing: grayscale;
     position: absolute;
     left: 0; }
-  .overview-list *.drug {
-    padding-left: 1.8125em; }
-    .overview-list *.drug:before {
+  .overview-list *.drug,
+  .result .meta *.drug {
+    padding-left: 1.875em; }
+    .overview-list *.drug:before,
+    .result .meta *.drug:before {
       content: "\e905";
       font-size: 1.75em; }
-  .overview-list *.date {
+  .overview-list *.behavioral,
+  .result .meta *.behavioral {
+    padding-left: 1.8125em; }
+    .overview-list *.behavioral:before,
+    .result .meta *.behavioral:before {
+      content: "\e914";
+      font-size: 1.5em; }
+  .overview-list *.procedure,
+  .result .meta *.procedure {
+    padding-left: 1.8125em; }
+    .overview-list *.procedure:before,
+    .result .meta *.procedure:before {
+      content: "\e915";
+      font-size: 1.5em; }
+  .overview-list *.date,
+  .result .meta *.date {
     padding-left: 1.75em; }
-    .overview-list *.date:before {
+    .overview-list *.date:before,
+    .result .meta *.date:before {
       content: "\e90d";
       font-size: 1.3125em;
       top: 0.125em; }
-  .overview-list *.men {
+  .overview-list *.men,
+  .result .meta *.men {
     padding-left: 1.625em; }
-    .overview-list *.men:before {
+    .overview-list *.men:before,
+    .result .meta *.men:before {
       content: "\e906";
       font-size: 1.375em;
       top: 0.0625em; }
-  .overview-list *.women {
+  .overview-list *.women,
+  .result .meta *.women {
     padding-left: 1.625em; }
-    .overview-list *.women:before {
+    .overview-list *.women:before,
+    .result .meta *.women:before {
       content: "\e908";
       font-size: 1.375em;
       top: 0.0625em; }
-  .overview-list *.men-and-women {
+  .overview-list *.men-and-women,
+  .result .meta *.men-and-women {
     padding-left: 1.75em; }
-    .overview-list *.men-and-women:before {
+    .overview-list *.men-and-women:before,
+    .result .meta *.men-and-women:before {
       content: "\e907";
       font-size: 1.375em;
       top: 0.0625em; }
-.overview-list .number {
+.overview-list .number,
+.result .meta .number {
   background-color: #3c3c3b;
   color: #fff;
   border-radius: 0.8em;
@@ -1245,6 +1290,8 @@ html.mm-opened .show-menu span.bottom-bar {
   @media only screen and (min-width: 600px) {
     .banner {
       background-image: url("../img/banner.jpg"); } }
+  .banner a {
+    color: inherit; }
   .banner > div {
     max-width: 1200px;
     margin-left: auto;
@@ -1258,6 +1305,10 @@ html.mm-opened .show-menu span.bottom-bar {
   .banner h2 {
     border-color: rgba(255, 255, 255, 0.2);
     margin-bottom: 0.2em; }
+  .banner input {
+    color: #3c3c3b; }
+  .banner .search-bar {
+    margin-top: 0.8em; }
   .banner .breadcrumb {
     margin-bottom: 0.8em;
     color: rgba(255, 255, 255, 0.9); }
@@ -1364,6 +1415,143 @@ html.mm-opened .show-menu span.bottom-bar {
     background-position: 0px 0px; }
   100% {
     background-position: 40px 0px; } }
+.search-bar {
+  position: relative; }
+  .search-bar input[type="search"] {
+    padding: 1em 3.5em 1em 1.5em; }
+    @media only screen and (min-width: 600px) {
+      .search-bar input[type="search"] {
+        font-size: 1.125em;
+        border-radius: 5px; } }
+    .search-bar input[type="search"] + button {
+      position: absolute;
+      top: 50%;
+      right: 1em;
+      width: 3em;
+      height: 3em;
+      margin-top: -2em;
+      background-color: transparent;
+      color: #3c3c3b; }
+      .search-bar input[type="search"] + button span {
+        overflow: hidden;
+        text-indent: 101%;
+        white-space: nowrap;
+        display: block; }
+      .search-bar input[type="search"] + button:before {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'opentrials' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e904";
+        font-size: 3em;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0; }
+  .search-bar + .toggle-advanced {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.9375em; }
+
+@media only screen and (min-width: 600px) {
+  .advanced > div {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .advanced > div:last-child {
+      margin-right: 0; }
+    .advanced > div:nth-child(3n) {
+      margin-right: 0; }
+    .advanced > div:nth-child(3n+1) {
+      clear: left; } }
+.advanced > div label {
+  text-align: left;
+  font-weight: normal; }
+@media only screen and (min-width: 600px) {
+  .advanced > div.sample-size > div {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 46.28851%; }
+    .advanced > div.sample-size > div:last-child {
+      margin-right: 0; } }
+.advanced button {
+  background-color: #fff;
+  color: #05b0e1;
+  display: block;
+  margin-top: 1.6em;
+  clear: both;
+  width: 100%;
+  padding: 1em 3.5em; }
+  @media only screen and (min-width: 600px) {
+    .advanced button {
+      display: inline-block;
+      width: auto; } }
+
+.js .advanced {
+  display: none; }
+
+.pagination::after {
+  clear: both;
+  content: "";
+  display: table; }
+.pagination li {
+  font-size: 14px;
+  border-radius: 2px;
+  display: inline-block; }
+  .pagination li span {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    height: 0;
+    display: inline-block;
+    width: 0; }
+.pagination a,
+.pagination button {
+  color: #3c3c3b;
+  display: block;
+  padding: 8px 12px 6px 12px; }
+  .pagination a:hover,
+  .pagination button:hover {
+    background: #f5f5f5; }
+.pagination .current {
+  padding: 8px 12px 6px 12px;
+  background: #05b0e1;
+  color: #fff;
+  cursor: default;
+  font-weight: 600; }
+.pagination .disabled {
+  padding: 8px 12px 6px 12px;
+  color: #d0d0d0;
+  cursor: default; }
+  .pagination .disabled:hover {
+    background: transparent; }
+.pagination .ellipsis::after {
+  content: '…';
+  padding: 8px 12px 6px 12px;
+  color: #3c3c3b; }
+
+.pagination-previous a::before,
+.pagination-previous.disabled::before {
+  content: '«';
+  display: inline-block;
+  margin-right: 0.5rem; }
+
+.pagination-next a::after,
+.pagination-next.disabled::after {
+  content: '»';
+  display: inline-block;
+  margin-left: 0.5rem; }
+
 html,
 .site-footer {
   background-color: #05b0e1; }
@@ -2037,52 +2225,11 @@ html.mm-opening .mm-menu.mm-front, html.mm-opening .mm-menu.mm-next {
         font-size: 1.375em; } }
     .home .main form input {
       color: #3c3c3b; }
-    .home .main form .search-bar {
-      position: relative; }
+    @media only screen and (min-width: 900px) {
       .home .main form .search-bar input[type="search"] {
-        padding: 1em 3.5em 1em 1.5em; }
-        @media only screen and (min-width: 600px) {
-          .home .main form .search-bar input[type="search"] {
-            font-size: 1.125em;
-            border-radius: 5px; } }
-        @media only screen and (min-width: 900px) {
-          .home .main form .search-bar input[type="search"] {
-            font-size: 1.375em; } }
-        .home .main form .search-bar input[type="search"] + button {
-          position: absolute;
-          top: 50%;
-          right: 1em;
-          width: 3em;
-          height: 3em;
-          margin-top: -2em;
-          background-color: transparent;
-          color: #3c3c3b; }
-          .home .main form .search-bar input[type="search"] + button span {
-            overflow: hidden;
-            text-indent: 101%;
-            white-space: nowrap;
-            display: block; }
-          .home .main form .search-bar input[type="search"] + button:before {
-            /* use !important to prevent issues with browser extensions that change fonts */
-            font-family: 'opentrials' !important;
-            speak: none;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-            /* Better Font Rendering =========== */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            content: "\e904";
-            font-size: 3em;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0; }
+        font-size: 1.375em; } }
     .home .main form .toggle-advanced {
-      display: inline-block;
-      cursor: pointer; }
+      float: none; }
       @media only screen and (min-width: 600px) {
         .home .main form .toggle-advanced {
           font-size: 1.125em; } }
@@ -2101,41 +2248,6 @@ html.mm-opening .mm-menu.mm-front, html.mm-opening .mm-menu.mm-next {
         content: "\e602";
         display: block;
         font-size: 1.5em; }
-    @media only screen and (min-width: 600px) {
-      .home .main form .advanced > div {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%; }
-        .home .main form .advanced > div:last-child {
-          margin-right: 0; }
-        .home .main form .advanced > div:nth-child(3n) {
-          margin-right: 0; }
-        .home .main form .advanced > div:nth-child(3n+1) {
-          clear: left; } }
-    .home .main form .advanced > div label {
-      text-align: left;
-      font-weight: normal; }
-    @media only screen and (min-width: 600px) {
-      .home .main form .advanced > div.sample-size > div {
-        float: left;
-        display: block;
-        margin-right: 7.42297%;
-        width: 46.28851%; }
-        .home .main form .advanced > div.sample-size > div:last-child {
-          margin-right: 0; } }
-    .home .main form .advanced button {
-      background-color: #fff;
-      color: #05b0e1;
-      display: block;
-      margin-top: 1.6em;
-      clear: both;
-      width: 100%;
-      padding: 1em 3.5em; }
-      @media only screen and (min-width: 600px) {
-        .home .main form .advanced button {
-          display: inline-block;
-          width: auto; } }
   @media only screen and (min-width: 600px) and (min-height: 768px) {
     .home:not(.advanced-search) {
       height: 100%; }
@@ -2178,7 +2290,57 @@ html.mm-opening .mm-menu.mm-front, html.mm-opening .mm-menu.mm-next {
           position: absolute;
           bottom: 0;
           width: 100%; } }
-  .home.js .advanced {
-    display: none; }
+
+.result {
+  padding-top: 0.8em;
+  padding-bottom: 1.6em;
+  margin-bottom: 0.8em;
+  border-bottom: solid 1px #f5f5f5; }
+  .result .title {
+    font-size: 1.375em; }
+  .result .follow {
+    color: #d0d0d0;
+    cursor: pointer; }
+    @media only screen and (min-width: 900px) {
+      .result .follow {
+        float: right; } }
+    .result .follow span {
+      overflow: hidden;
+      text-indent: 101%;
+      white-space: nowrap;
+      width: 0;
+      height: 0;
+      display: block; }
+    .result .follow:before {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'opentrials' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\e90c";
+      font-size: 1.4em;
+      display: inline-block;
+      margin-top: 0.3em; }
+  .result .meta {
+    font-size: 0.875em;
+    line-height: 1.8; }
+    @media only screen and (min-width: 600px) {
+      .result .meta li {
+        display: table-row; }
+        .result .meta li > strong, .result .meta li > span {
+          display: table-cell; }
+        .result .meta li > strong {
+          padding-right: 0.8em; } }
+    .result .meta a {
+      color: inherit; }
+
+.pagination {
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
