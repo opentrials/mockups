@@ -922,6 +922,19 @@ dl {
   border-radius: 0.8em;
   font-size: 0.9em;
   padding: 0.0625em 0.5em; }
+.overview-list .more,
+.result .meta .more {
+  background-color: #05b0e1;
+  color: #fff;
+  font-weight: normal;
+  font-size: 0.9em;
+  border-radius: 2px;
+  padding-left: 0.8em;
+  padding-right: 0.8em; }
+  @media only screen and (min-width: 600px) {
+    .overview-list .more,
+    .result .meta .more {
+      float: right; } }
 
 .document-list li {
   background-color: rgba(16, 202, 131, 0.11); }
