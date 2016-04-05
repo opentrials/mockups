@@ -1090,13 +1090,16 @@ picture {
     .site-header > div .logo svg {
       height: 46px;
       float: left;
-      fill: #05b0e1; }
+      fill: #05b0e1;
+      width: 24px; }
       @media only screen and (min-width: 600px) {
         .site-header > div .logo svg {
-          height: 54px; } }
+          height: 54px;
+          width: 28px; } }
       @media only screen and (min-width: 900px) {
         .site-header > div .logo svg {
-          height: 72px; } }
+          height: 72px;
+          width: 37px; } }
     .site-header > div .logo .title,
     .site-header > div .logo .tagline {
       margin-left: 32px;
